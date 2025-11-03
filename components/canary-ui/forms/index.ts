@@ -1,4 +1,6 @@
 export { default as CanaryInput } from "./CanaryInput";
+export { CanaryFloatingInput } from "./CanaryFloatingInput";
+export type { CanaryFloatingInputProps } from "./CanaryFloatingInput";
 export { default as CanaryTextArea } from "./CanaryTextArea";
 export { default as CanarySelect } from "./CanarySelect";
 export type { CanarySelectOption } from "./CanarySelect";

@@ -15,6 +15,7 @@ export { ButtonType, ButtonSize, ButtonColor, IconPosition } from "./buttons/typ
 // Forms
 export {
   CanaryInput,
+  CanaryFloatingInput,
   CanaryTextArea,
   CanarySelect,
   CanaryCheckbox,
@@ -22,7 +23,7 @@ export {
   CanaryRadioGroup,
 } from "./forms";
 export { InputSize, InputType } from "./forms/types";
-export type { BaseFormProps, CanarySelectOption } from "./forms";
+export type { BaseFormProps, CanarySelectOption, CanaryFloatingInputProps } from "./forms";
 
 // Data Display
 export { CanaryTag, CanaryTable, CanaryCard } from "./data-display";

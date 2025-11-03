@@ -25,8 +25,8 @@ const CanaryCheckbox = forwardRef<HTMLInputElement, CanaryCheckboxProps>(
     const checkboxClasses = clsx(
       "w-5 h-5 rounded border-2 transition-all duration-200",
       "cursor-pointer appearance-none",
-      "checked:bg-[#2858c4] checked:border-[#2858c4]",
-      "focus:outline-none focus:ring-2 focus:ring-[#2858c4] focus:ring-offset-2",
+      "checked:bg-[#926E27] checked:border-[#926E27]",
+      "focus:outline-none focus:ring-2 focus:ring-[#926E27] focus:ring-offset-2",
       error && "border-[#e40046]",
       !error && "border-[#cecece]",
       isDisabled && "opacity-50 cursor-not-allowed",
