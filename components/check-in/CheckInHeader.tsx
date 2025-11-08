@@ -7,12 +7,14 @@ interface CheckInHeaderProps {
   title: string;
   currentStep: number;
   totalSteps?: number;
+  showStepper?: boolean;
 }
 
 export const CheckInHeader: React.FC<CheckInHeaderProps> = ({
   title,
   currentStep,
   totalSteps = 4,
+  showStepper = true,
 }) => {
   return (
     <div className="bg-[#926e27] w-full flex flex-col">
@@ -79,21 +81,33 @@ export const CheckInHeader: React.FC<CheckInHeaderProps> = ({
         </div>
 
         {/* Progress Stepper with fade animation */}
-        <div className="flex gap-2 w-[124px]">
-          {Array.from({ length: totalSteps }).map((_, index) => (
-            <motion.div
-              key={index}
-              animate={{
-                opacity: index < currentStep ? 1 : 0.4,
-              }}
-              transition={{
-                duration: 0.3,
-                ease: [0.4, 0.0, 0.2, 1],
-              }}
-              className="flex-1 h-[3px] rounded-lg bg-white"
-            />
-          ))}
-        </div>
+        {showStepper ? (
+          <div className="flex gap-2 w-[124px]">
+            {Array.from({ length: totalSteps }).map((_, index) => (
+              <motion.div
+                key={index}
+                animate={{
+                  opacity: index < currentStep ? 1 : 0.4,
+                }}
+                transition={{
+                  duration: 0.3,
+                  ease: [0.4, 0.0, 0.2, 1],
+                }}
+                className="flex-1 h-[3px] rounded-lg bg-white"
+              />
+            ))}
+          </div>
+        ) : (
+          <motion.div
+            initial={{ opacity: 1 }}
+            animate={{ opacity: 0 }}
+            transition={{
+              duration: 0.3,
+              ease: [0.4, 0.0, 0.2, 1],
+            }}
+            className="flex gap-2 w-[124px] h-[3px]"
+          />
+        )}
       </div>
     </div>
   );
