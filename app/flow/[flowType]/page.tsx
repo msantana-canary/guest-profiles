@@ -115,7 +115,7 @@ export default function FlowPage() {
 
   const transition = {
     type: 'tween' as const,
-    ease: [0.4, 0.0, 0.2, 1], // iOS-style easing
+    ease: [0.4, 0.0, 0.2, 1] as const, // iOS-style easing
     duration: 0.35,
   };
 
