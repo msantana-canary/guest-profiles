@@ -1,10 +1,10 @@
-import { forwardRef, InputHTMLAttributes } from "react";
+import { forwardRef, InputHTMLAttributes, ReactNode } from "react";
 import { colors } from "../design-tokens";
 import clsx from "clsx";
 
 export interface CanaryCheckboxProps
   extends Omit<InputHTMLAttributes<HTMLInputElement>, "size" | "type"> {
-  label?: string;
+  label?: string | ReactNode;
   isDisabled?: boolean;
   error?: string;
   helperText?: string;
